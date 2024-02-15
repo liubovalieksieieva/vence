@@ -129,29 +129,7 @@ body {
     }
   }
 }
-// =================Адаптив меню==========================
-// @media (max-width: 730px) {
-//   .menu-open {
-//     .menu-burger {
-//       span {
-//         width: 0;
-//       }
-//       &::before {
-//         top: 50%;
-//         transform: rotate(-45deg);
-//       }
-//       &::after {
-//         top: 50%;
-//         transform: rotate(45deg);
-//       }
-//     }
-//     &__body {
-//       width: 60%;
-//       left: 0;
-//       background-color: rgb(33, 37, 41);
-//     }
-//   }
-// }
+
 .menu {
   // .menu__body
   &__body {
@@ -161,9 +139,9 @@ body {
       height: 100%;
       top: 0;
       left: -100%;
-      overflow: auto;
+      // overflow: auto;
       background-color: #212529;
-      padding: rem(70) rem(15) rem(20) rem(15);
+      padding: rem(50) rem(15) rem(20) rem(15);
       transition: left 0.3s;
       &::before {
         content: "";
@@ -172,7 +150,7 @@ body {
         width: 100%;
         top: 0;
         left: -100%;
-        background-color: #17191c;
+        background-color: #eaeef2;
         z-index: 1;
         transition: left 0.3s;
       }
@@ -186,8 +164,12 @@ body {
     row-gap: rem(3);
     flex-wrap: wrap;
     @media (max-width: 730px) {
+      width: 50%;
       flex-direction: column;
       row-gap: rem(25);
+      background-color: #212529;
+      padding: 20px;
+      transition: width 0.5s;
     }
   }
 
@@ -356,6 +338,7 @@ body {
     }
   }
 }
+// =================Адаптив меню==========================
 @media (max-width: 730px) {
   .menu-open {
     .menu-burger {
@@ -372,9 +355,10 @@ body {
       }
     }
     .menu__body {
-      width: 60%;
+      background-color: rgba(73, 80, 87, 0);
+      width: 100%;
       left: 0;
-      background-color: rgb(33, 37, 41);
+      padding: rem(50) rem(15) rem(20) rem(0);
     }
     .sub-menu__link {
       color: #ffffff;
