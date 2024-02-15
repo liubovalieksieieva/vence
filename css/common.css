@@ -1,0 +1,22 @@
+/*---------- Title---------- */
+.title {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.6;
+	color: #212529;
+	max-width: 393px;
+}
+.part__title--white,
+.content__title--white {
+	color: #F8F9FA;
+	max-width: 605px;
+	text-align: center;
+}
+
+.subtitle {
+	font-size: 16px;
+	font-weight: 500;
+	color: #212529;
+	line-height: 1.5;
+	transition: all 0.5s;
+}
