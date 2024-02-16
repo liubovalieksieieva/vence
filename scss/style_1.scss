@@ -139,7 +139,7 @@ body {
       height: 100%;
       top: 0;
       left: -100%;
-      // overflow: auto;
+      overflow: auto;
       background-color: #212529;
       padding: rem(50) rem(15) rem(20) rem(15);
       transition: left 0.3s;
@@ -164,7 +164,7 @@ body {
     row-gap: rem(3);
     flex-wrap: wrap;
     @media (max-width: 730px) {
-      width: 50%;
+      width: 80%;
       flex-direction: column;
       row-gap: rem(25);
       background-color: #212529;
@@ -341,6 +341,9 @@ body {
 // =================Адаптив меню==========================
 @media (max-width: 730px) {
   .menu-open {
+    .lock {
+      overflow: hidden;
+    }
     .menu-burger {
       span {
         width: 0;
@@ -731,7 +734,11 @@ body {
     align-items: flex-start;
     gap: rem(40);
     @media (max-width: 925px) {
+      font-size: 18px;
       gap: rem(30);
+    }
+    @media (max-width: 585px) {
+      align-items: center;
     }
     @media (max-width: 566px) {
       // align-items: center;
@@ -742,8 +749,11 @@ body {
   &__card {
     display: flex;
     gap: rem(30);
-    @media (max-width: 514px) {
-      // flex-direction: column;
+    @media (max-width: 830px) {
+      gap: rem(20);
+    }
+    @media (max-width: 800px) {
+      flex-direction: column;
     }
   }
 
@@ -786,6 +796,7 @@ body {
     .title {
       position: relative;
       z-index: 2;
+      background-color: rgba(33, 37, 41, 0.603);
     }
 
     .text {

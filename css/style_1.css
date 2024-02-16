@@ -52,7 +52,7 @@ button {
 }
 
 .header__logo {
-  color: #F8F9FA;
+  color: #f8f9fa;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 18px;
@@ -62,7 +62,7 @@ button {
 }
 .header__logo::after {
   content: ".";
-  color: #DDBEA9;
+  color: #ddbea9;
 }
 
 .title {
@@ -84,14 +84,19 @@ button {
 }
 
 .title--white {
-  color: #F8F9FA;
+  color: #f8f9fa;
 }
 
 .subtitle {
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5;
-  color: #F8F9FA;
+  color: #f8f9fa;
+}
+@media (max-width: 800px) {
+  .subtitle {
+    font-size: 20px;
+  }
 }
 
 body {
@@ -251,6 +256,7 @@ body {
     height: 100%;
     top: 0;
     left: -100%;
+    overflow: auto;
     background-color: #212529;
     padding: 3.125rem 0.9375rem 1.25rem 0.9375rem;
     -webkit-transition: left 0.3s;
@@ -282,7 +288,7 @@ body {
 }
 @media (max-width: 730px) {
   .menu__list {
-    width: 50%;
+    width: 80%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -447,6 +453,9 @@ body {
 }
 
 @media (max-width: 730px) {
+  .menu-open .lock {
+    overflow: hidden;
+  }
   .menu-open .menu-burger span {
     width: 0;
   }
@@ -821,7 +830,15 @@ body {
 }
 @media (max-width: 925px) {
   .topics__columns {
+    font-size: 18px;
     gap: 1.875rem;
+  }
+}
+@media (max-width: 585px) {
+  .topics__columns {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .topics__card {
@@ -829,6 +846,19 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 1.875rem;
+}
+@media (max-width: 830px) {
+  .topics__card {
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 800px) {
+  .topics__card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .topics__image {
   position: relative;
@@ -880,6 +910,7 @@ body {
 .topics__image .title {
   position: relative;
   z-index: 2;
+  background-color: rgba(33, 37, 41, 0.603);
 }
 .topics__image .text {
   position: relative;
